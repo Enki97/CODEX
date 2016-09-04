@@ -1,0 +1,15 @@
+Usuarios del sistema
+Usuario:Contraseña
+
+
+Avanzado
+49088778:93009300
+
+Seleccionador
+19462164:123456
+
+Deportista
+13006425:123456
+
+Entrenador
+17072678:123456

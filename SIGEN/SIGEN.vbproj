@@ -1,0 +1,761 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{34637ED7-382C-4943-977F-3D5AE7571956}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SIGEN.My.MyApplication</StartupObject>
+    <RootNamespace>SIGEN</RootNamespace>
+    <AssemblyName>SIGEN</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationIcon>icono.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SIGEN.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42025,42030,42032,42036,42104,42108,42109</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>Full</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SIGEN.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42025,42030,42032,42036,42104,42108,42109</NoWarn>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\Controlador\ApplicationEvents.vb" />
+    <Compile Include="src\Controlador\Configuracion.vb" />
+    <Compile Include="src\Modelo\Estructura\Actividad.vb" />
+    <Compile Include="src\Modelo\BD.vb" />
+    <Compile Include="src\Modelo\Estructura\Combo.vb" />
+    <Compile Include="src\Modelo\Estructura\Deportista.vb" />
+    <Compile Include="src\Modelo\Estructura\Ejercicio.vb" />
+    <Compile Include="src\Modelo\Estructura\Entrenador.vb" />
+    <Compile Include="src\Modelo\Estructura\Equipos.vb" />
+    <Compile Include="src\Modelo\Estructura\Evolucion.vb" />
+    <Compile Include="src\Controlador\Fecha.vb" />
+    <Compile Include="src\Modelo\Estructura\Sectores.vb" />
+    <Compile Include="src\Vista\Altas\Form1.Designer.vb">
+      <DependentUpon>FrmAltaGruposMusculares.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Consultas\FrmActividad.Designer.vb">
+      <DependentUpon>FrmActividad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Consultas\FrmActividad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaActividad.Designer.vb">
+      <DependentUpon>FrmAltaActividad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaActividad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaEvolucion.Designer.vb">
+      <DependentUpon>FrmAltaEvolucion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaEvolucion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaGruposMusculares.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaAvanzado.Designer.vb">
+      <DependentUpon>FrmAltaAvanzado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaAvanzado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaCombo.Designer.vb">
+      <DependentUpon>FrmAltaCombo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaCombo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaDeportista.Designer.vb">
+      <DependentUpon>FrmAltaDeportista.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaDeportista.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaDeportistaDos.Designer.vb">
+      <DependentUpon>FrmAltaDeportistaDos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaDeportistaDos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaEjercicio.Designer.vb">
+      <DependentUpon>FrmAltaEjercicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaEjercicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaEntrenador.Designer.vb">
+      <DependentUpon>FrmAltaEntrenador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaEntrenador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaEquipo.Designer.vb">
+      <DependentUpon>FrmAltaEquipo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaEquipo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaInstituto.Designer.vb">
+      <DependentUpon>FrmAltaInstituto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaInstituto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaPlanEntrenamiento.Designer.vb">
+      <DependentUpon>FrmAltaPlanEntrenamiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaPlanEntrenamiento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaSector.Designer.vb">
+      <DependentUpon>FrmAltaSector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaSector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaSeleccionador.Designer.vb">
+      <DependentUpon>FrmAltaSeleccionador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmAltaSeleccionador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Consultas\FrmCombo.designer.vb">
+      <DependentUpon>FrmCombo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Consultas\FrmCombo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Consultas\FrmEvolucion.Designer.vb">
+      <DependentUpon>FrmEvolucion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Consultas\FrmEvolucion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Consultas\FrmInstituto.Designer.vb">
+      <DependentUpon>FrmInstituto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Consultas\FrmInstituto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Listas\FrmListarActividad.Designer.vb">
+      <DependentUpon>FrmListarActividad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Listas\FrmListarActividad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Listas\FrmListarInstituto.Designer.vb">
+      <DependentUpon>FrmListarInstituto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Listas\FrmListarInstituto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Listas\FrmListarSectores.Designer.vb">
+      <DependentUpon>FrmListarSectores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Listas\FrmListarSectores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarActividad.Designer.vb">
+      <DependentUpon>FrmModificarActividad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarActividad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarInstituto.Designer.vb">
+      <DependentUpon>FrmModificarInstituto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarInstituto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarSector.Designer.vb">
+      <DependentUpon>FrmModificarSector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarSector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarSeleccionador.Designer.vb">
+      <DependentUpon>FrmModificarSeleccionador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarSeleccionador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Perfiles\FrmPerfilDeportista.Designer.vb">
+      <DependentUpon>FrmPerfilDeportista.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Perfiles\FrmPerfilDeportista.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Consultas\FrmEjercicio.Designer.vb">
+      <DependentUpon>FrmEjercicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Consultas\FrmEjercicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Consultas\FrmEquipo.Designer.vb">
+      <DependentUpon>FrmEquipo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Consultas\FrmEquipo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Consultas\FrmGruposMusculares.Designer.vb">
+      <DependentUpon>FrmGruposMusculares.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Consultas\FrmGruposMusculares.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\FrmIdioma.Designer.vb">
+      <DependentUpon>FrmIdioma.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\FrmIdioma.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Listas\FrmListaDeportistas.Designer.vb">
+      <DependentUpon>FrmListaDeportistas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Listas\FrmListaDeportistas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Listas\FrmListarCombos.Designer.vb">
+      <DependentUpon>FrmListarCombos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Listas\FrmListarCombos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Listas\FrmListarEjercicios.Designer.vb">
+      <DependentUpon>FrmListarEjercicios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Listas\FrmListarEjercicios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Listas\FrmListarEntrenadores.Designer.vb">
+      <DependentUpon>FrmListarEntrenadores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Listas\FrmListarEntrenadores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Listas\FrmListarEquipos.Designer.vb">
+      <DependentUpon>FrmListarEquipos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Listas\FrmListarEquipos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Listas\FrmListarGruposMusculares.Designer.vb">
+      <DependentUpon>FrmListarGruposMusculares.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Listas\FrmListarGruposMusculares.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Menus\FrmMenuAvanzado.Designer.vb">
+      <DependentUpon>FrmMenuAvanzado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Menus\FrmMenuAvanzado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Menus\FrmMenuDeportista.Designer.vb">
+      <DependentUpon>FrmMenuDeportista.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Menus\FrmMenuDeportista.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Menus\FrmMenuEntrenador.Designer.vb">
+      <DependentUpon>FrmMenuEntrenador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Menus\FrmMenuEntrenador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Menus\FrmMenuSeleccionador.Designer.vb">
+      <DependentUpon>FrmMenuSeleccionador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Menus\FrmMenuSeleccionador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarAvanzado.Designer.vb">
+      <DependentUpon>FrmModificarAvanzado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarAvanzado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarCombos.Designer.vb">
+      <DependentUpon>FrmModificarCombos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarCombos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarDeportista.Designer.vb">
+      <DependentUpon>FrmModificarDeportista.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarDeportista.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarDeportistaDos.Designer.vb">
+      <DependentUpon>FrmModificarDeportistaDos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarDeportistaDos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarEjercicio.Designer.vb">
+      <DependentUpon>FrmModificarEjercicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarEjercicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarEntrenador.Designer.vb">
+      <DependentUpon>FrmModificarEntrenador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarEntrenador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarEquipo.Designer.vb">
+      <DependentUpon>FrmModificarEquipo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarEquipo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarGruposMusculares.Designer.vb">
+      <DependentUpon>FrmModificarGruposMusculares.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Modificaciones\FrmModificarGruposMusculares.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Perfiles\FrmPerfilAvanzado.Designer.vb">
+      <DependentUpon>FrmPerfilAvanzado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Perfiles\FrmPerfilAvanzado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Perfiles\FrmPerfilEntrenador.Designer.vb">
+      <DependentUpon>FrmPerfilEntrenador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Perfiles\FrmPerfilEntrenador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Perfiles\FrmPerfilSeleccionador.Designer.vb">
+      <DependentUpon>FrmPerfilSeleccionador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Perfiles\FrmPerfilSeleccionador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Consultas\FrmPlanEntrenamiento.Designer.vb">
+      <DependentUpon>FrmPlanEntrenamiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Consultas\FrmPlanEntrenamiento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Consultas\FrmSector.Designer.vb">
+      <DependentUpon>FrmSector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Consultas\FrmSector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmSerie.Designer.vb">
+      <DependentUpon>FrmSerie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Altas\FrmSerie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Vista\Consultas\FrmTablaCompatibilidad.Designer.vb">
+      <DependentUpon>FrmTablaCompatibilidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Vista\Consultas\FrmTablaCompatibilidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Modelo\Estructura\GruposMusculares.vb" />
+    <Compile Include="src\Modelo\Estructura\Instituto.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="src\Controlador\Navegacion.vb" />
+    <Compile Include="src\Modelo\Estructura\PlanesEntrenamiento.vb" />
+    <Compile Include="src\Modelo\Estructura\Realiza.vb" />
+    <Compile Include="src\Modelo\Estructura\Seleccionador.vb" />
+    <Compile Include="src\Modelo\Estructura\Usuario.vb" />
+    <Compile Include="src\Modelo\Estructura\Avanzado.vb" />
+    <Compile Include="src\Controlador\Validacion.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="src\Vista\Consultas\FrmActividad.resx">
+      <DependentUpon>FrmActividad.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Altas\FrmAltaActividad.resx">
+      <DependentUpon>FrmAltaActividad.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Altas\FrmAltaAvanzado.resx">
+      <DependentUpon>FrmAltaAvanzado.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Altas\FrmAltaCombo.resx">
+      <DependentUpon>FrmAltaCombo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Altas\FrmAltaDeportista.resx">
+      <DependentUpon>FrmAltaDeportista.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Altas\FrmAltaDeportistaDos.resx">
+      <DependentUpon>FrmAltaDeportistaDos.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Altas\FrmAltaEjercicio.resx">
+      <DependentUpon>FrmAltaEjercicio.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Altas\FrmAltaEntrenador.resx">
+      <DependentUpon>FrmAltaEntrenador.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Altas\FrmAltaEquipo.resx">
+      <DependentUpon>FrmAltaEquipo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Altas\FrmAltaEvolucion.resx">
+      <DependentUpon>FrmAltaEvolucion.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Altas\FrmAltaGruposMusculares.resx">
+      <DependentUpon>FrmAltaGruposMusculares.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Altas\FrmAltaInstituto.resx">
+      <DependentUpon>FrmAltaInstituto.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Altas\FrmAltaPlanEntrenamiento.resx">
+      <DependentUpon>FrmAltaPlanEntrenamiento.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Altas\FrmAltaSector.resx">
+      <DependentUpon>FrmAltaSector.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Altas\FrmAltaSeleccionador.resx">
+      <DependentUpon>FrmAltaSeleccionador.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Consultas\FrmCombo.resx">
+      <DependentUpon>FrmCombo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Consultas\FrmEvolucion.resx">
+      <DependentUpon>FrmEvolucion.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Consultas\FrmInstituto.resx">
+      <DependentUpon>FrmInstituto.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Listas\FrmListarActividad.resx">
+      <DependentUpon>FrmListarActividad.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Listas\FrmListarInstituto.resx">
+      <DependentUpon>FrmListarInstituto.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Listas\FrmListarSectores.resx">
+      <DependentUpon>FrmListarSectores.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Modificaciones\FrmModificarActividad.resx">
+      <DependentUpon>FrmModificarActividad.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Modificaciones\FrmModificarInstituto.resx">
+      <DependentUpon>FrmModificarInstituto.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Modificaciones\FrmModificarSector.resx">
+      <DependentUpon>FrmModificarSector.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Modificaciones\FrmModificarSeleccionador.resx">
+      <DependentUpon>FrmModificarSeleccionador.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Perfiles\FrmPerfilDeportista.resx">
+      <DependentUpon>FrmPerfilDeportista.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Consultas\FrmEjercicio.resx">
+      <DependentUpon>FrmEjercicio.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Consultas\FrmEquipo.resx">
+      <DependentUpon>FrmEquipo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Consultas\FrmGruposMusculares.resx">
+      <DependentUpon>FrmGruposMusculares.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\FrmIdioma.resx">
+      <DependentUpon>FrmIdioma.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Listas\FrmListaDeportistas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmListaDeportistas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Listas\FrmListarCombos.resx">
+      <DependentUpon>FrmListarCombos.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Listas\FrmListarEjercicios.resx">
+      <DependentUpon>FrmListarEjercicios.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Listas\FrmListarEntrenadores.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmListarEntrenadores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Listas\FrmListarEquipos.resx">
+      <DependentUpon>FrmListarEquipos.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Listas\FrmListarGruposMusculares.resx">
+      <DependentUpon>FrmListarGruposMusculares.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Menus\FrmMenuAvanzado.resx">
+      <DependentUpon>FrmMenuAvanzado.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Menus\FrmMenuDeportista.resx">
+      <DependentUpon>FrmMenuDeportista.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Menus\FrmMenuEntrenador.resx">
+      <DependentUpon>FrmMenuEntrenador.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Menus\FrmMenuSeleccionador.resx">
+      <DependentUpon>FrmMenuSeleccionador.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Modificaciones\FrmModificarAvanzado.resx">
+      <DependentUpon>FrmModificarAvanzado.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Modificaciones\FrmModificarCombos.resx">
+      <DependentUpon>FrmModificarCombos.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Modificaciones\FrmModificarDeportista.resx">
+      <DependentUpon>FrmModificarDeportista.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Modificaciones\FrmModificarDeportistaDos.resx">
+      <DependentUpon>FrmModificarDeportistaDos.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Modificaciones\FrmModificarEjercicio.resx">
+      <DependentUpon>FrmModificarEjercicio.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Modificaciones\FrmModificarEntrenador.resx">
+      <DependentUpon>FrmModificarEntrenador.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Modificaciones\FrmModificarEquipo.resx">
+      <DependentUpon>FrmModificarEquipo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Modificaciones\FrmModificarGruposMusculares.resx">
+      <DependentUpon>FrmModificarGruposMusculares.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Perfiles\FrmPerfilAvanzado.resx">
+      <DependentUpon>FrmPerfilAvanzado.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Perfiles\FrmPerfilEntrenador.resx">
+      <DependentUpon>FrmPerfilEntrenador.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Perfiles\FrmPerfilSeleccionador.resx">
+      <DependentUpon>FrmPerfilSeleccionador.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Consultas\FrmPlanEntrenamiento.resx">
+      <DependentUpon>FrmPlanEntrenamiento.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Consultas\FrmSector.resx">
+      <DependentUpon>FrmSector.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Altas\FrmSerie.resx">
+      <DependentUpon>FrmSerie.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Vista\Consultas\FrmTablaCompatibilidad.resx">
+      <DependentUpon>FrmTablaCompatibilidad.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\english.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spanish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icono.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
