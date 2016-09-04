@@ -1,3 +1,5 @@
 PARA PODER EJECUTAR EL PROYECTO, SE DEBE INSTALAR
-LA LIBRERÕA "MSChart.exe", QUE SE ENCUENTRA EN EL
-DIRECTORIO RAÕZ DEL PROYECTO.
+LA LIBRER√çA "MSChart.exe", QUE SE ENCUENTRA EN EL
+DIRECTORIO RA√çZ DEL PROYECTO.
+sigen.exp corresponde a la exportaci√≥n de la base de datos
+en ese momento se uso informix
